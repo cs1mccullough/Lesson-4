@@ -3,11 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="calCSS.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-    <script src="calculator.js"></script> // 1. write JS (controller) code in "calculator.js" to work with calculator
+    <script src="calculator.js"></script>
+    <script src="../Todo/angular.min.js"></script>
+
+    <!-- // 1. write JS (controller) code in "calculator.js" to work with calculator-->
+
+
 </head>
-<body>
-// 2. write html(view) code to display the todo list
+<body ng-app="cApp" ng-controller="cCon">
+<!--// 2. write html(view) code to display the todo list-->
+<div class="container">
+
+<!--<input type="text"><br>-->
+    <form name=form1>
+        <input name =result><br>
+        <input type="button" name="zero" value="0"  onclick='inputto("0")'>
+        <input type="button" name="one" value="1"  onclick='inputto("1")'>
+        <input type="button" name="two" value="2"  onclick='inputto("2")'>
+        <input type="button" name="plus" value="+"  onclick='inputto("+")'><br>
+        <input type="button" name="three" value="3"  onclick='inputto("3")'>
+        <input type="button" name="four" value="4"  onclick='inputto("4")'>
+        <input type="button" name="five" value="5"  onclick='inputto("5")'><br>
+        <input type="button" name="six" value="6"  onclick='inputto("6")'>
+        <input type="button" name="seven" value="7"  onclick='inputto("7")'>
+        <input type="button" name="eight" value="8"  onclick='inputto("8")'><br>
+        <input type="button" name="nine" value="9"  onclick='inputto("9")'>
+        <input type="button" name="equal" value="=" onclick={{result}}>
+        <input type="button" name="clear" value="Clear" onclick='clearinput()'><br>
+
+        <!--  "1", "2", <br> "3" "4" "5" <br> "6" "7" "8" <br> "9")">-->
+    </form>
 
 </body>
 </html>
